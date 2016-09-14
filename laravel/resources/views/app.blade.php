@@ -12,6 +12,9 @@
 <script src="{{ asset('laravel/resources/assets/js/jquery-2.2.4.min.js')}}"></script>
 
 <style>
+ .no-padding{
+   padding: 0;
+ }
   @media(max-width:768px){
     .navbar-default {
        background-color: #fff !important;
@@ -22,6 +25,9 @@
     .content{
       margin-top: 52px;
     }
+  }
+  .navbar-brand{
+    padding: 7px 15px;
   }
 
   .footer{
@@ -52,6 +58,11 @@
   }
   .footer .footer-menu li a{
     color: #fff;
+  }
+
+  .copyright{
+    border-top: 2px solid #fff;
+    padding-top: 5px;
   }
 </style>
 
@@ -103,17 +114,17 @@
         <li><a href="#">Cek Pesan</a></li>
         <li><a href="#">Login</a></li>
         <li><a href="#">Register</a></li>
-        <li class="hidden-xs"><a href="#"><i class="ion-android-search"></i></a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
+        <li class="dropdown hidden-xs">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="ion-android-search"></i></a>
+          <div class="dropdown-menu">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <!-- <button type="submit" class="btn btn-default"><i class="ion-android-search"></i></button> -->
+            </form>
+          </div>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -124,17 +135,19 @@
 @yield('content')
 </div>
 
+
+
 <!--Footer-->
-<div class="footer">
-  <div class="row footer-top">
-    <div class="container">
-      <div class="col-sm-2">
-        <img src="{{ asset('laravel/resources/assets/img/logo-footer.png') }}" class="footer-logo">
-        <p><strong>Contact</strong></p>
-        <p>24 Hour Call Center</p>
-        <p><i class="ion ion-ios-telephone-outline"></i> 8041080808</p>
-      </div>
-      <div class="col-sm-2">
+<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-sm-2 col-sm-offset-1">
+      <img src="{{ asset('laravel/resources/assets/img/logo-footer.png') }}" class="footer-logo">
+      <p><strong>Contact</strong></p>
+      <p>&nbsp; &nbsp;  24 Hour Call Center</p>
+      <p><img src="{{ asset('laravel/resources/assets/img/phone.png') }}" width="15"> 8041080808</p>
+    </div>
+    <div class="col-sm-8">
+      <div class="col-sm-2 no-padding">
         <strong>Rental</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -146,7 +159,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-2 no-padding">
         <strong>Airport Transfer</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -158,7 +171,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-2 no-padding">
         <strong>Airport Shuttle</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -170,19 +183,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2">
-        <strong>Rental</strong>
-        <ul class="footer-menu">
-            <li><a href="#">Cara Pesan</a></li>
-            <li><a href="#">Cek Pesan</a></li>
-            <li><a href="#">Kendaraan</a></li>
-            <li><a href="#">Fasilitas</a></li>
-            <li><a href="#">Area Layanan</a></li>
-            <li><a href="#">Bantuan</a></li>
-            <li><a href="#">Syarat & Ketentuan</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-2">
+      <div class="col-sm-2 no-padding">
         <strong>Tourism</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -194,26 +195,42 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-
+      <div class="col-sm-2 no-padding">
+        <strong>Fleet Management</strong>
+        <ul class="footer-menu">
+            <li><a href="#">Cara Pesan</a></li>
+            <li><a href="#">Cek Pesan</a></li>
+            <li><a href="#">Kendaraan</a></li>
+            <li><a href="#">Fasilitas</a></li>
+            <li><a href="#">Area Layanan</a></li>
+            <li><a href="#">Bantuan</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 no-padding">
+        <strong>Tentang Aerotrans</strong>
+        <ul class="footer-menu">
+            <li><a href="#">Cara Pesan</a></li>
+            <li><a href="#">Cek Pesan</a></li>
+            <li><a href="#">Kendaraan</a></li>
+            <li><a href="#">Fasilitas</a></li>
+            <li><a href="#">Area Layanan</a></li>
+            <li><a href="#">Bantuan</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+        </ul>
+      </div>
 
     </div>
-
   </div>
-  <div class="row">
-    <div class="container copyright text-right">
-      <small>Copyright &copy; 2016 Aerotrans</small>
+
+    <div class="row" >
+      <div class="col-sm-10 col-sm-offset-1 copyright text-right">
+        <span class="pull-left">
+          <img src="{{ asset('laravel/resources/assets/img/ssl-vpn.png') }}" width="20">
+        </span>
+        copyright &copy; 2016 Aerotrans
+      </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="container text-center">
-        <img src="{{ asset('laravel/resources/assets/img/footer-join-us.png') }}" width="100">
-        <!-- <ul>
-          <li><a href="#"></a></li>
-        </ul> -->
-    </div>
-  </div>
-
 </div>
 <!--./Footer-->
 
@@ -222,6 +239,18 @@
 <script src="{{ asset('laravel/resources/assets/owl.carousel.2.1.0/owl.carousel.js')}}"></script>
 
 <script>
+
+$(window).scroll(function () {
+    var w = $(window).width();
+    if (w > 768) {
+        if ($(this).scrollTop() > 50) {
+          $('.navbar-default').css("background", "#fff");
+        } else {
+          $('.navbar-default').css("background", "transparent");
+        }
+    }
+});
+
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
     loop:true,
