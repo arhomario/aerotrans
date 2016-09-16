@@ -80,6 +80,12 @@
   text-align: center;
   padding: 15px;
   margin-top: 15px;
+
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
  @media(max-width:768px){
    .book .product li{
@@ -99,6 +105,12 @@
 .book .product li:hover {
   background-color: #eee;
   border-radius: 15px;
+
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
 
 .book .product li a{

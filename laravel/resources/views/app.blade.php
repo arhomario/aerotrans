@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="{{ asset('laravel/resources/assets/img/logo.png') }}" width="90"></a>
+      <a class="navbar-brand" href="#"><img src="{{ asset('laravel/resources/assets/img/logo.png') }}"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -215,9 +215,13 @@ $(window).scroll(function () {
     var w = $(window).width();
     if (w > 768) {
         if ($(this).scrollTop() > 50) {
-          $('.navbar-default').css("background", "#fff");
+
+          $('.navbar-default').addClass("scroll-down");
+          $('.navbar-default').removeClass("scroll-up");
+
         } else {
-          $('.navbar-default').css("background", "transparent");
+          $('.navbar-default').addClass("scroll-up");
+          $('.navbar-default').removeClass("scroll-down");
         }
     }
 });
