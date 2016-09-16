@@ -12,13 +12,31 @@
 .book .book-tabs{
   background: #07509c;
   color: #fff;
-  margin-top: -41px;
+  margin-top: -46px;
   z-index: 9;
   position:relative;
 }
+
+
 @media(max-width:768px){
   .book .book-tabs{
     margin: -2px;
+  }
+
+  .book .book-tabs .nav-justified > li {
+    /*float: left;*/
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-justified > li > a {
+    margin-bottom: 0;
+  }
+  .book .book-tabs .nav-justified img {
+    width: 20px;
+  }
+  .book .book-tabs .nav > li > a{
+    padding: 10px 5px;
+
   }
 }
 .book .tab-content{
@@ -63,7 +81,7 @@
 .book .search-cars{
   margin-top: 15px;
 }
-.book .input-group-addon{
+.book .search-cars .input-group-addon{
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -102,10 +120,23 @@
      width: 25%;
    }
  }
+
+ .book .product .product-img{
+   text-align: center;
+ }
 .book .product li:hover {
   background-color: #eee;
   border-radius: 15px;
 
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+
+.book .product li:hover .product-img{
+  transform: scale(1.1);
   -webkit-transition: all 1000ms ease;
   -moz-transition: all 1000ms ease;
   -ms-transition: all 1000ms ease;
@@ -120,8 +151,14 @@
   width: 100%;
 
 }
-.book .product img{
-  width: 100%;
+
+/*.book .product .product-img-area{
+
+  padding-top:25px;
+
+}*/
+.book .product .product-img{
+  width: 70%;
 }
 
 .book .btn-book{
@@ -152,9 +189,11 @@
      padding: 15px;
    }
  }
-.promo .items{
-  padding-top: 25px;
-}
+/*.promo .items{
+  position: relative;
+  height: 0;
+}*/
+
 </style>
 
 
@@ -232,9 +271,9 @@
     <div class="">
       <div class="book-tabs">
         <ul class="nav nav-tab nav-justified" >
-          <li class="active"><a data-toggle="tab" href="#first">Hourly Rental</a></li>
-          <li><a data-toggle="tab" href="#second">Airport Transfer</a></li>
-          <li><a data-toggle="tab" href="#three">Airport Shuttle</a></li>
+          <li class="active"><a data-toggle="tab" href="#first"><img src="{{ asset('laravel/resources/assets/img/car-rental.png') }}" width="25">&nbsp; &nbsp;Hourly Rental</a></li>
+          <li><a data-toggle="tab" href="#second"><img src="{{ asset('laravel/resources/assets/img/airport.png') }}" width="25">&nbsp; &nbsp;Airport Transfer</a></li>
+          <li><a data-toggle="tab" href="#three"><img src="{{ asset('laravel/resources/assets/img/bus-rental.png') }}" width="20">&nbsp; &nbsp;Airport Shuttle</a></li>
         </ul>
       </div>
       <div class="tab-content">
@@ -354,51 +393,59 @@
   <div class="product-area">
     <ul class="product">
       <li>
-          <img src="{{ asset('laravel/resources/assets/img/product/BRV.png')}}">
+        <div class="product-img-wrap">
+          <img src="{{ asset('laravel/resources/assets/img/product/BRV.png')}}" class="product-img">
+        </div>
           <a href="#"><strong>Honda Mobilio</span></a>
           <p class="help-block">IDR 300.000/Hour</p>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
+          <div class="input-group">
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-1.png')}}" width="11"> 6</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-2.png')}}" width="11"> M</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-3.png')}}" width="11"> Lorem</span>
           </div>
           <div class="btn-book"><a class="btn btn-primary btn-sm">Book</a></div>
       </li>
       <li>
         <div class="text-center items">
-          <img src="{{ asset('laravel/resources/assets/img/product/Mobilio.png')}}">
+          <div class="product-img-wrap">
+            <img src="{{ asset('laravel/resources/assets/img/product/Mobilio.png')}}" class="product-img">
+          </div>
           <a href="#"><strong>Honda Mobilio</span></a>
           <p class="help-block">IDR 300.000/Hour</p>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
+          <div class="input-group">
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-1.png')}}" width="11"> 6</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-2.png')}}" width="11"> M</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-3.png')}}" width="11"> Lorem</span>
           </div>
           <div class="btn-book"><a class="btn btn-primary btn-sm">Book</a></div>
         </div>
       </li>
       <li>
         <div class="text-center items">
-          <img src="{{ asset('laravel/resources/assets/img/product/Freed2012.png')}}">
+          <div class="product-img-wrap">
+            <img src="{{ asset('laravel/resources/assets/img/product/Freed2012.png')}}" class="product-img">
+          </div>
           <a href="#"><strong>Honda Mobilio</span></a>
           <p class="help-block">IDR 300.000/Hour</p>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
+          <div class="input-group">
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-1.png')}}" width="11"> 6</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-2.png')}}" width="11"> M</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-3.png')}}" width="11"> Lorem</span>
           </div>
           <div class="btn-book"><a class="btn btn-primary btn-sm">Book</a></div>
         </div>
       </li>
       <li>
         <div class="text-center items">
-          <img src="{{ asset('laravel/resources/assets/img/product/Mobilio.png')}}">
+          <div class="product-img-wrap">
+            <img src="{{ asset('laravel/resources/assets/img/product/Mobilio.png')}}" class="product-img">
+          </div>
           <a href="#"><strong>Honda Mobilio</span></a>
           <p class="help-block">IDR 300.000/Hour</p>
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
-            <button type="button" class="btn btn-default">Lorem</button>
+          <div class="input-group">
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-1.png')}}" width="11"> 6</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-2.png')}}" width="11"> M</span>
+            <span class="input-group-addon"><img src="{{ asset('laravel/resources/assets/img/cars-icon-3.png')}}" width="11"> Lorem</span>
           </div>
           <div class="btn-book"><a class="btn btn-primary btn-sm">Book</a></div>
         </div>
@@ -430,7 +477,8 @@
       while($i < 4){
       ?>
       <div class="col-xs-6 col-sm-4" style="margin: 15px 0px;">
-        <!-- <div class="col-sm-12 no-padding" style="background:url('{{ asset('laravel/resources/assets/img/promo/1.jpg')}}'); background-size: 300px 100px, cover; "> -->
+        <!-- <div class="col-sm-12 no-padding items" style="background:url('{{ asset('laravel/resources/assets/img/promo/1.jpg')}}'); height:100% auto;"> -->
+
         <div class="col-sm-12 no-padding">
             <a href="#">
                 <div class="overlay">
@@ -451,7 +499,7 @@
       $i++;
       }
       ?>
-      <div class="col-xs-12 col-sm-8" style="margin: 10px 0px;">
+      <div class="col-xs-12 col-sm-8" style="margin: 15px 0px;">
         <div class="col-sm-12 no-padding">
             <a href="#">
                 <div class="overlay">
@@ -484,6 +532,18 @@
   </div>
 </div>
 <!--./Video-->
+
+<script>
+  var prod_img_w = $('.product-img-wrap').width();
+  var prod_img_h = $('.product-img-wrap').height();
+  $('.product-img-wrap').css('width',prod_img_w);
+  $('.product-img-wrap').css('height',prod_img_h);
+
+  //
+  // var promo_img_w = $('.promo .content img').width();
+  // var promo_img_h = $('.promo .content img').height();
+  // $('.promo .content img').css('height',promo_img_h);
+</script>
 
 
 @endsection
