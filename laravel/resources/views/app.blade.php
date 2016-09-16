@@ -4,68 +4,13 @@
 <title>@yield('title')</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="{{ asset('laravel/resources/assets/bootstrap-3.3.6-dist/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('laravel/resources/assets/css/style.css') }}" rel="stylesheet">
 <link href="{{ asset('laravel/resources/assets/owl.carousel.2.1.0/assets/owl.carousel.css') }}" rel="stylesheet">
 
 <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 <script src="{{ asset('laravel/resources/assets/js/jquery-2.2.4.min.js')}}"></script>
-
-<style>
- .no-padding{
-   padding: 0;
- }
-  @media(max-width:768px){
-    .navbar-default {
-       background-color: #fff !important;
-    }
-    .navbar-default .navbar-toggle{
-          border-color: transparent;
-    }
-    .content{
-      margin-top: 52px;
-    }
-  }
-  .navbar-brand{
-    padding: 7px 15px;
-  }
-
-  .footer{
-    background: url('{{ asset("laravel/resources/assets/img/footer-background.jpg")}}');
-    padding-top: 25px;
-    padding-bottom: 25px;
-    color: #fff;
-  }
-  .footer .copyright{
-    border-top: 2px solid #fff;
-    padding-bottom: 25px;
-  }
-  .footer .footer-logo{
-    width: 50%;
-    margin-bottom: 15px;
-  }
-  @media(max-width:768px){
-    .footer .footer-logo{
-      width: 20%;
-    }
-  }
-  .footer .footer-menu{
-    margin: 0;
-    padding: 0;
-  }
-  .footer .footer-menu li{
-    list-style: none;
-  }
-  .footer .footer-menu li a{
-    color: #fff;
-  }
-
-  .copyright{
-    border-top: 2px solid #fff;
-    padding-top: 5px;
-  }
-</style>
-
 
 </head>
 <body>
@@ -103,23 +48,33 @@
       </ul>-->
       <form class="navbar-form navbar-left hidden-sm hidden-md hidden-lg">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+         <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary"><i class="ion-android-search"></i></button>
+            </span>
+          </div>
         </div>
         <!-- <button type="submit" class="btn btn-default"><i class="ion-android-search"></i></button> -->
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Beranda</a></li>
+        <li class="active"><a href="#">Beranda</a></li>
         <li><a href="#">Bantuan</a></li>
         <li><a href="#">Cara Pesan</a></li>
         <li><a href="#">Cek Pesan</a></li>
         <li><a href="#">Login</a></li>
         <li><a href="#">Register</a></li>
         <li class="dropdown hidden-xs">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="ion-android-search"></i></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search"></i></a>
           <div class="dropdown-menu">
             <form class="navbar-form navbar-left">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+                <div class="input-group">
+                    <input type="text" class="form-control" style="width:200px;" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn btn-primary"><i class="ion-android-search"></i></button>
+                    </span>
+                </div>
               </div>
               <!-- <button type="submit" class="btn btn-default"><i class="ion-android-search"></i></button> -->
             </form>
@@ -142,12 +97,12 @@
   <div class="row">
     <div class="col-sm-2 col-sm-offset-1">
       <img src="{{ asset('laravel/resources/assets/img/logo-footer.png') }}" class="footer-logo">
-      <p><strong>Contact</strong></p>
+      <div class="contact"><strong>Contact</strong></div>
       <p>&nbsp; &nbsp;  24 Hour Call Center</p>
       <p><img src="{{ asset('laravel/resources/assets/img/phone.png') }}" width="15"> 8041080808</p>
     </div>
     <div class="col-sm-8">
-      <div class="col-sm-2 no-padding">
+      <div class="col-sm-2 menu no-padding">
         <strong>Rental</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -159,7 +114,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2 no-padding">
+      <div class="col-sm-2 menu no-padding">
         <strong>Airport Transfer</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -171,7 +126,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2 no-padding">
+      <div class="col-sm-2 menu no-padding">
         <strong>Airport Shuttle</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -183,7 +138,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2 no-padding">
+      <div class="col-sm-2 menu no-padding">
         <strong>Tourism</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -195,7 +150,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2 no-padding">
+      <div class="col-sm-2 menu no-padding">
         <strong>Fleet Management</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -207,7 +162,7 @@
             <li><a href="#">Syarat & Ketentuan</a></li>
         </ul>
       </div>
-      <div class="col-sm-2 no-padding">
+      <div class="col-sm-2 menu no-padding">
         <strong>Tentang Aerotrans</strong>
         <ul class="footer-menu">
             <li><a href="#">Cara Pesan</a></li>
@@ -229,6 +184,22 @@
           <img src="{{ asset('laravel/resources/assets/img/ssl-vpn.png') }}" width="20">
         </span>
         copyright &copy; 2016 Aerotrans
+      </div>
+    </div>
+
+    <div class="row" align="center">
+      <div class="col-sm-6 col-sm-offset-3">
+
+          <img src="{{ asset('laravel/resources/assets/img/footer-join-us.png') }}" width="120">
+          <div class="social-wrap">
+            <ul class="social">
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
       </div>
     </div>
 </div>
