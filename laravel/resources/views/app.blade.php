@@ -95,13 +95,13 @@
 <!--Footer-->
 <div class="container-fluid footer">
   <div class="row">
-    <div class="col-sm-2 col-sm-offset-1">
+    <div class="col-md-2 col-md-offset-1">
       <img src="{{ asset('laravel/resources/assets/img/logo-footer.png') }}" class="footer-logo">
       <div class="contact"><strong>Contact</strong></div>
       <p>&nbsp; &nbsp;  24 Hour Call Center</p>
-      <p><img src="{{ asset('laravel/resources/assets/img/phone.png') }}" width="15"> 08041080808</p>
+      <p><img src="{{ asset('laravel/resources/assets/img/phone.png') }}" width="15"> 8041080808</p>
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <div class="col-sm-2 menu no-padding">
         <strong>Rental</strong>
         <ul class="footer-menu">
@@ -178,26 +178,26 @@
     </div>
   </div>
 
-    <div class="row" >
+    <div class="" >
       <div class="col-sm-10 col-sm-offset-1 copyright text-right">
         <span class="pull-left">
-          <img src="{{ asset('laravel/resources/assets/img/ssl-vpn.png') }}" width="30">
+          <img src="{{ asset('laravel/resources/assets/img/ssl-vpn.png') }}" width="20">
         </span>
-        <p>Copyright &copy; 2016 Aerotrans</p>
+        Copyright &copy; 2016 Aerotrans
       </div>
     </div>
 
-    <div class="row" align="center">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="" align="center">
+      <div class="col-md-6 col-md-offset-3">
 
           <img src="{{ asset('laravel/resources/assets/img/footer-join-us.png') }}" width="120">
           <div class="social-wrap">
             <ul class="social">
               <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
               <li><a href="#"><i class="fa fa-facebook-official fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram fa-lg"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </div>
       </div>
