@@ -538,15 +538,32 @@
 <!--./Promo-->
 
 <!--Video-->
-<a href="#">
+<a href="#" class="launch-modal" data-modal-id="modal-video">
   <img src="{{ asset('laravel/resources/assets/img/video/cover.jpg')}}" class="img-responsive">
 </a>
 <!--./Video-->
 
+<!-- MODAL -->
+        <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-video">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d9TpRfDdyU0"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <script>
-
-
-
 $(document).ready(function(){
   car_resize();
 })
@@ -564,6 +581,10 @@ function car_resize(){
   // var promo_img_h = $('.promo .content img').height();
   // $('.promo .content img').css('height',promo_img_h);
 </script>
-
-
+<script>
+  $('.launch-modal').on('click', function(e){
+    e.preventDefault();
+    $( '#' + $(this).data('modal-id') ).modal();
+});
+</script>
 @endsection
