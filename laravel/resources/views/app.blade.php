@@ -99,7 +99,7 @@
       <img src="{{ asset('laravel/resources/assets/img/logo-footer.png') }}" class="footer-logo">
       <div class="contact"><strong>Contact</strong></div>
       <p>&nbsp; &nbsp;  24 Hour Call Center</p>
-      <p><img src="{{ asset('laravel/resources/assets/img/phone.png') }}" width="15"> 8041080808</p>
+      <p align="center"><i class="fa fa-phone" aria-hidden="true"></i> 8041080808</p>
     </div>
     <div class="col-md-8">
       <div class="col-sm-2 menu no-padding">
